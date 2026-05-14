@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extreme Boost | Painéis de Otimização</title>
+    <style>
+        :root {
+            --primary-color: #00d4ff;
+            --secondary-color: #0055ff;
+            --bg-dark: #0a0a0c;
+            --card-bg: #16161a;
+            --text-gray: #a0a0a0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: white;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 80px 20px;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a1a2e 0%, var(--bg-dark) 100%);
+        }
+
+        h1 { font-size: 3rem; margin-bottom: 10px; color: var(--primary-color); }
+        .subtitle { color: var(--text-gray); font-size: 1.2rem; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+
+        /* Seção Por Que Comprar */
+        .why-buy {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .benefit-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .benefit-card h3 { margin-top: 0; color: var(--primary-color); }
+
+        /* Tabela de Preços */
+        .pricing {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .price-card {
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 20px;
+            padding: 40px 30px;
+            width: 300px;
+            text-align: center;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .price-card.featured {
+            border: 2px solid var(--primary-color);
+            transform: scale(1.05);
+            background: #1c1c21;
+        }
+
+        .badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            color: black;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .price { font-size: 2.5rem; font-weight: bold; margin: 20px 0; }
+        .price span { font-size: 1rem; color: var(--text-gray); }
+
+        ul { list-style: none; padding: 0; margin: 30px 0; text-align: left; }
+        li { margin-bottom: 12px; display: flex; align-items: center; }
+        li::before { content: "✓"; color: var(--primary-color); margin-right: 10px; font-weight: bold; }
+
+        .btn {
+            display: block;
+            background: var(--primary-color);
+            color: black;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover { background: var(--secondary-color); color: white; }
+
+        footer { text-align: center; padding: 40px; color: var(--text-gray); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Domine a Partida</h1>
+    <p class="subtitle">Otimização de elite para quem busca o máximo desempenho.</p>
+</header>
+
+<div class="container">
+    <!-- Por que comprar -->
+    <h2 style="text-align:center; margin-bottom:40px;">Por que usar nosso Painel?</h2>
+    <div class="why-buy">
+        <div class="benefit-card">
+            <h3>Vantagem Competitiva</h3>
+            <p>Reduzimos o input lag ao mínimo, garantindo que seus cliques e movimentos sejam registrados instantaneamente antes do seu oponente.</p>
+        </div>
+        <div class="benefit-card">
+            <h3>Estabilidade de FPS</h3>
+            <p>Acabe com as quedas bruscas de quadros (stuttering). Nosso painel estabiliza o frame time para uma experiência fluida.</p>
+        </div>
+        <div class="benefit-card">
+            <h3>Sistema Limpo</h3>
+            <p>Removemos processos de telemetria e lixo do Windows que consomem sua CPU e RAM em segundo plano enquanto você joga.</p>
+        </div>
+    </div>
+
+    <!-- Opções de Painel -->
+    <h2 style="text-align:center; margin-bottom:40px;">Escolha seu Plano</h2>
+    <div class="pricing">
+        <!-- Plano Diário -->
+        <div class="price-card">
+            <h3>Otimização Diária</h3>
+            <p>Ideal para um boost rápido</p>
+            <div class="price">R$ 5<span>/dia</span></div>
+            <ul>
+                <li>Limpeza de arquivos temporários</li>
+                <li>Otimização de RAM básica</li>
+                <li>Boost de DNS para menor ping</li>
+                <li>Suporte básico via Discord</li>
+            </ul>
+            <a href="#" class="btn">Comprar Agora</a>
+        </div>
+
+        <!-- Plano Mensal (Destaque) -->
+        <div class="price-card featured">
+            <div class="badge">MAIS POPULAR</div>
+            <h3>Otimização Mensal</h3>
+            <p>O pacote completo para pro-players</p>
+            <div class="price">R$ 45<span>/mês</span></div>
+            <ul>
+                <li><strong>Tudo do plano Semanal</strong></li>
+                <li>Otimização de Registro (Regedit)</li>
+                <li>Debloat completo do Windows</li>
+                <li>Prioridade total na CPU</li>
+                <li>Suporte VIP 24/7</li>
+            </ul>
+            <a href="#" class="btn">Assinar Agora</a>
+        </div>
+
+        <!-- Plano Semanal -->
+        <div class="price-card">
+            <h3>Otimização Semanal</h3>
+            <p>Para jogadores frequentes</p>
+            <div class="price">R$ 15<span>/semana</span></div>
+            <ul>
+                <li>Tudo do plano Diário</li>
+                <li>Ajustes de latência de mouse</li>
+                <li>Plano de energia exclusivo</li>
+                <li>Suporte prioritário</li>
+            </ul>
+            <a href="#" class="btn">Comprar Agora</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    &copy; 2026 Extreme Boost - Melhore sua performance.
+</footer>
+
+</body>
+</html>
